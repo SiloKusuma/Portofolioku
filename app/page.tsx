@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import ExperienceCertificate from "@/components/ExperienceCertificate";
 import Projects from "@/components/Projects";
 import BlogSection from "@/components/BlogSection";
 import Contact from "@/components/Contact";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <ExperienceCertificate />
       <Projects />
       <BlogSection />
       <Contact />

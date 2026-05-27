@@ -12,10 +12,10 @@ const projects = [
     forks_count: 0,
   },
   {
-    name: "web-craft",
-    description: "Platform untuk membangun website modern dengan drag-and-drop.",
+    name: "PostQuily",
+    description: "Aplikasi media sosial opensource",
     html_url: "https://github.com/SiloKusuma/web-craft",
-    language: "TypeScript",
+    language: "PHP",
     stargazers_count: 1,
     forks_count: 0,
   },
@@ -31,7 +31,7 @@ const projects = [
     name: "Invoice-Maker-Kosan",
     description: "Aplikasi pembuatan invoice otomatis untuk bisnis kos-kosan.",
     html_url: "https://github.com/SiloKusuma/Invoice-Maker-Kosan",
-    language: "React",
+    language: "Python",
     stargazers_count: 2,
     forks_count: 0,
   },
@@ -41,6 +41,8 @@ const languageConfig: Record<string, { dot: string; badge: string }> = {
   TypeScript: { dot: "bg-blue-400", badge: "bg-blue-500/10 text-blue-300 border-blue-500/25" },
   JavaScript: { dot: "bg-yellow-400", badge: "bg-yellow-500/10 text-yellow-300 border-yellow-500/25" },
   React: { dot: "bg-cyan-400", badge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/25" },
+  Python: { dot: "bg-blue-500", badge: "bg-blue-500/10 text-blue-300 border-blue-500/25" },
+  PHP: { dot: "bg-purple-500", badge: "bg-purple-500/10 text-purple-300 border-purple-500/25" },
 };
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {

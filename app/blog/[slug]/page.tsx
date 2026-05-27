@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blogData";
 import { getBlogHeadings } from "@/lib/blogContent";
 import BlogArticleContent from "@/components/BlogArticleContent";
+import BlogShare from "@/components/BlogShare";
 import BlogTableOfContents from "@/components/BlogTableOfContents";
 
 interface Props {
@@ -55,6 +56,8 @@ export default function BlogDetailPage({ params }: Props) {
             <div className="mt-12">
               <BlogArticleContent content={post.content} />
             </div>
+
+            <BlogShare title={post.title} excerpt={post.excerpt} />
           </article>
 
           {headings.length > 0 && (

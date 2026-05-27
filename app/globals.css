@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-black text-neutral-300 antialiased;
+  }
+  ::selection {
+    @apply bg-white text-black;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes blurFadeIn {
+  from { opacity: 0; filter: blur(12px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  will-change: transform;
+}
+
+@layer utilities {
+  .section-container {
+    @apply max-w-3xl mx-auto px-6 py-24 md:py-32;
+  }
+  .section-label {
+    @apply text-2xl md:text-3xl font-semibold text-neutral-300;
+  }
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2.5px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+    margin-top: 0.5rem;
+    border-radius: 999px;
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.9s ease-out both;
+  }
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out both;
+  }
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out both;
+  }
+  .animate-blur-in {
+    animation: blurFadeIn 0.8s ease-out both;
+  }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-right {
+  animation: marqueeRight 30s linear infinite;
+  width: max-content;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+.delay-9 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1s; }

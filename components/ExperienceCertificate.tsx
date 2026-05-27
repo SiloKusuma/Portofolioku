@@ -18,8 +18,8 @@ export default function ExperienceCertificate() {
             className="relative transition-transform duration-700 ease-in-out"
             style={{
               transformStyle: "preserve-3d",
-              transformOrigin: "right center",
-              transform: flipped ? "rotateY(-180deg)" : "rotateY(0deg)",
+              transformOrigin: "center top",
+              transform: flipped ? "rotateX(-180deg)" : "rotateX(0deg)",
             }}
           >
             <div style={{ backfaceVisibility: "hidden" }}>

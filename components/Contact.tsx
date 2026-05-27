@@ -1,50 +1,73 @@
+const contactLinks = [
+  {
+    name: "GitHub",
+    href: "https://github.com/SiloKusuma",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/silokusuma.bsky.social",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+        <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.526-2.833 8.922 4.897 5.06 6.73-1.1 7.686-4.32.957 3.22 2.05 9.382 7.686 4.32 4.267-6.09 1.19-8.342-2.833-8.922a23.84 23.84 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" />
+      </svg>
+    ),
+  },
+  {
+    name: "GitLab",
+    href: "https://gitlab.com/SiloKusuma",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+        <path d="m23.6 9.593-.033-.09L20.34.593a.851.851 0 0 0-.336-.405.865.865 0 0 0-.51-.088.883.883 0 0 0-.483.215l-4.711 4.99-4.425-4.99a.853.853 0 0 0-.672-.323.857.857 0 0 0-.671.323L.743 9.502a.847.847 0 0 0-.099.94l9.94 14.5a.85.85 0 0 0 .308.308.862.862 0 0 0 1.216 0 .847.847 0 0 0 .308-.308l3.84-5.61 3.84 5.61a.85.85 0 0 0 .308.308.862.862 0 0 0 1.216 0 .847.847 0 0 0 .308-.308l9.94-14.5a.845.845 0 0 0-.098-.94z" />
+      </svg>
+    ),
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/628122013663",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+      </svg>
+    ),
+  },
+];
+
 export default function Contact() {
   return (
     <section id="contact" className="section-container border-t border-neutral-900">
       <p className="section-label animate-fade-up">Contact</p>
-      <p className="text-sm text-neutral-600 mb-12 max-w-md leading-relaxed mt-6 animate-fade-up delay-2">
-        Ingin ngobrol, kolaborasi, atau sekadar bertanya? Temukan saya di salah
-        satu platform berikut.
-      </p>
-      <div className="grid sm:grid-cols-3 gap-3 animate-fade-up delay-4">
-        <a
-          href="https://wa.me/6281220136633"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group p-5 border border-neutral-900 hover:bg-neutral-900/50 hover:border-neutral-600 transition-all"
-        >
-          <p className="text-xs tracking-[0.2em] uppercase text-neutral-700 mb-2 group-hover:text-neutral-400 transition-colors">
-            WhatsApp
-          </p>
-          <p className="text-sm text-white group-hover:underline">
-            +62 812-2013-6633
-          </p>
-        </a>
+
+      <div className="mt-10 flex flex-wrap gap-x-10 gap-y-5 animate-fade-up delay-2">
+        {contactLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 text-white transition-opacity hover:opacity-80"
+          >
+            {link.icon}
+            <span className="text-lg font-bold underline underline-offset-[6px] decoration-white">
+              {link.name}
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <p className="mt-10 text-base text-white animate-fade-up delay-4">
+        Or mail me at{" "}
         <a
           href="mailto:silokusuma17@gmail.com"
-          className="group p-5 border border-neutral-900 hover:bg-neutral-900/50 hover:border-neutral-600 transition-all"
+          className="font-bold underline underline-offset-[6px] decoration-white hover:opacity-80 transition-opacity"
         >
-          <p className="text-xs tracking-[0.2em] uppercase text-neutral-700 mb-2 group-hover:text-neutral-400 transition-colors">
-            Email
-          </p>
-          <p className="text-sm text-white group-hover:underline break-all">
-            silokusuma17@gmail.com
-          </p>
+          silokusuma17@gmail.com
         </a>
-        <a
-          href="https://github.com/SiloKusuma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group p-5 border border-neutral-900 hover:bg-neutral-900/50 hover:border-neutral-600 transition-all"
-        >
-          <p className="text-xs tracking-[0.2em] uppercase text-neutral-700 mb-2 group-hover:text-neutral-400 transition-colors">
-            GitHub
-          </p>
-          <p className="text-sm text-white group-hover:underline">
-            @SiloKusuma
-          </p>
-        </a>
-      </div>
+      </p>
     </section>
   );
 }

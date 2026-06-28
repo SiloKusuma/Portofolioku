@@ -8,7 +8,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "postquily-platform-media-sosial-terbaru",
     title: "Postquily platform media sosial terbaru karya anak bangsa!",
     date: "2026-05-17",

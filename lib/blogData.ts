@@ -8,83 +8,40 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "apa-itu-vibe-coding",
-    title: "Apa Itu Vibe Coding?",
+    slug: "postquily-platform-media-sosial-terbaru",
+    title: "Postquily platform media sosial terbaru karya anak bangsa!",
     date: "2026-05-17",
     excerpt:
-      "Vibe Coding adalah tren terbaru di dunia pengembangan perangkat lunak yang menggabungkan coding dengan mood dan suasana hati. Simak penjelasan lengkapnya di sini.",
+      "Saya membuat sebuah platform media sosial bernama Postquily sendirian?, apakah itu sebuah prestasi? simak artikel selengkap nya!",
     content: `
-Vibe Coding adalah istilah yang muncul di komunitas developer untuk menggambarkan aktivitas coding sambil mendengarkan musik atau berada dalam suasana yang sesuai dengan mood, sehingga meningkatkan fokus dan produktivitas.
+Halo guys, saya baru saja membuat sebuah platform media sosial bernama Postquily. Platform ini saya buat karena keresahan saya saat menjelajah internet. Saat ini banyak platform media sosial yang mengumpulkan berbagai data pengguna, mulai dari riwayat aktivitas, pencarian, lokasi, hingga kebiasaan menggunakan aplikasi. Data tersebut kemudian dimanfaatkan untuk kebutuhan iklan yang lebih tertarget. Saya sempat berpikir, "Apakah memang harus seperti itu?" Dari pertanyaan sederhana itulah akhirnya saya memutuskan untuk mencoba membuat media sosial versi saya sendiri. Mungkin terdengar mustahil karena saya mengerjakannya sendirian. Namun saya percaya bahwa setiap proyek besar selalu dimulai dari langkah kecil.
 
-## Kenapa Vibe Coding?
+## Awal mula Postquily
 
-Banyak developer merasa bahwa musik membantu mereka masuk ke dalam *flow state* — kondisi di mana pikiran benar-benar fokus pada kode yang ditulis. Dengan memilih playlist yang tepat, kamu bisa:
+Awalnya saya hanya iseng membuat sebuah website yang dimana kita bisa berbagi kabar melalui postingan sederhana, Seiring berjalannya waktu, saya mulai menambahkan berbagai fitur sedikit demi sedikit sambil terus belajar teknologi web.
 
-- Meningkatkan konsentrasi saat debugging
-- Mengurangi stres dari deadline yang ketat
-- Memblokir distraksi dari lingkungan sekitar
-- Meningkatkan kreativitas dalam memecahkan masalah
+Banyak tantangan yang mulai muncul satu persatu
+- Perbaikan bug yang muncul dimana-mana
+- Membuat sebuah website agar responsif di semua device
+- Bagaimana data pengguna disimpan dengan aman
 
-## Tips Memulai Vibe Coding
+## Fokus Pada Privasi
 
-### 1. Pilih Musik yang Tepat
-Tidak semua musik cocok untuk coding. Beberapa genre yang populer:
+Salah satu tujuan saya menciptakan platform ini adalah memberikan pengalaman berselancar di internet dengan aman dan memberikan pengalaman media sosial yang lebih menghargai privasi user.
+Saya ingin sebisa mungkin mengurangi pengumpulan data yang tidak diperlukan. Data pengguna seharusnya digunakan untuk kebutuhan layanan, bukan dikumpulkan sebanyak mungkin tanpa alasan yang jelas.
+Walaupun tentu saja masih ada banyak hal yang harus dipelajari mengenai keamanan dan perlindungan data, saya ingin Postquily berkembang dengan prinsip tersebut sejak awal.
 
-- **Lo-fi Hip Hop** — Tempo lambat, tidak mengganggu
-- **Ambient / Electronic** — Cocok untuk sesi coding panjang
-- **Jazz Instrumental** — Hangat dan menenangkan
-- **Classical Music** — Terbukti membantu fungsi kognitif
+## Dibuat Sendirian
 
-### 2. Atur Lingkungan
-Pastikan meja kerja rapi, pencahayaan nyaman, dan siapkan minuman favoritmu.
+banyak orang sering bertanya-tanya ke saya, dengan pertanyaan "apakah kamu punya team?, kok kamu bisa bikin platform?" yah akan saya jawab sekarang, jawabanya adalah TIDAK, mungkin kalian masih ngga percaya kan?, terserah kalian percaya atau tidak saya mengerjakan platform ini dari awal sampai bisa berdiri sendirian tanpa bantuan siapapun.
 
-### 3. Gunakan Headphone
-Headphone noise-canceling bisa membantu kamu lebih fokus dan larut dalam kode.
+## Teknologi yang Digunakan
 
-## Kesimpulan
+Postquily menggunakan teknologi modern, agar nyaman di lihat dan digunakan
 
-Vibe coding bukan tentang aturan baku, tapi tentang menemukan ritme dan suasana yang paling cocok untuk dirimu. Cobalah berbagai genre musik, atur lingkungan kerja senyaman mungkin, dan lihat sendiri bagaimana produktivitas coding-mu meningkat.
+## Ini bukan akhir dari kehidupan
 
-Selamat mencoba dan tetap coding dengan vibe terbaik!
-    `.trim(),
-  },
-  {
-    slug: "memulai-karir-sebagai-frontend-developer",
-    title: "Memulai Karir Sebagai Frontend Developer",
-    date: "2026-05-10",
-    excerpt:
-      "Panduan lengkap untuk memulai karir sebagai frontend developer di tahun 2026, dari skill yang harus dikuasai hingga tips mendapatkan pekerjaan pertama.",
-    content: `
-Frontend developer adalah salah satu profesi yang paling dicari di industri teknologi. Tapi bagaimana cara memulainya? Artikel ini akan membahas langkah-langkah konkret yang bisa kamu ambil.
-
-## Skill Wajib Frontend Developer
-
-### 1. HTML, CSS, JavaScript
-Ini adalah fondasi utama. Kuasai semantic HTML, CSS Flexbox/Grid, dan JavaScript modern (ES6+).
-
-### 2. Framework
-Pilih salah satu framework utama:
-- **React** — Paling populer, banyak lowongan
-- **Vue** — Mudah dipelajari, cocok untuk pemula
-- **Next.js** — React framework untuk production-grade apps
-
-### 3. Version Control
-Git dan GitHub adalah mandatory skill. Pelajari branching, pull request, dan kolaborasi tim.
-
-### 4. Tools Lainnya
-- Package manager (npm/yarn/pnpm)
-- Build tools (Vite, Webpack)
-- Testing (Jest, Cypress)
-
-## Cara Mendapatkan Pengalaman
-
-1. **Buat portfolio** — Tunjukkan hasil karyamu
-2. **Kontribusi open source** — Cari issue label "good first issue"
-3. **Freelance kecil-kecilan** — Ambil proyek sederhana di platform freelance
-
-## Kesimpulan
-
-Karir sebagai frontend developer sangat menjanjikan. Kuncinya adalah konsisten belajar dan terus membuat proyek. Jangan menunggu sampai "siap" — mulai saja dari sekarang!
+Saya sadar bahwa membuat platform media sosial itu tidak lah mudah. Bahkan platform platform besar yang kita kenal sekarang (X,Reddit,Tiktok,Instagram) membutuhkan waktu bertahun-tahun untuk berkembang. Namun saya tidak menjadikan hal tersebut sebagai alasan untuk berhenti. Justru saya menjadikannya sebagai motivasi hidup agar terus upgrade diri.
     `.trim(),
   },
 ];

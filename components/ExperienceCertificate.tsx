@@ -37,7 +37,25 @@ export default function ExperienceCertificate() {
                 Sertifikat Kompetensi Dicoding - Belajar Dasar AI
               </h3>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                yang saya pelajari adalah dasar dasar AI, konsep dasar AI, dan machine learning
+                dasar dasar AI, machine learning dan deep learning
+              </p>
+            </div>
+            <div style={{ backfaceVisibility: "hidden" }}>
+              <img
+                src="/assets/dicoding-belajar-keuangan.png"
+                alt="Dicoding Belajar Keuangan"
+                className="rounded-2xl w-full shadow-lg"
+              />
+            </div>
+            <div
+              className="absolute inset-0 rounded-2xl bg-zinc-900/95 border border-white/10 p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg"
+              style={{ backfaceVisibility: "hidden", transform: "rotateX(180deg)" }}
+            >
+              <h3 className="text-base md:text-lg font-bold text-white mb-3 leading-snug">
+                Sertifikat Kompetensi Dicoding - Belajar Dasar Keuangan
+              </h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                tentang dasar dasar keuangan, manajemen keuangan
               </p>
             </div>
           </div>

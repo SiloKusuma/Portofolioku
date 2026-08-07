@@ -4,19 +4,19 @@ import { Star, GitFork, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    name: "rakitweb",
-    description: "Website untuk membantu merakit PC impian dengan mudah dan cepat.",
-    html_url: "https://github.com/SiloKusuma/rakitweb",
-    language: "TypeScript",
+    name: "Miku-Miku",
+    description: "Portal berita tentang anime, culture jepang",
+    html_url: "https://mikumiku.karyasilo.web.id/",
+    language: "PHP",
     stargazers_count: 0,
     forks_count: 0,
   },
   {
     name: "PostQuily",
-    description: "Aplikasi media sosial opensource",
-    html_url: "https://github.com/SiloKusuma/web-craft",
+    description: "Aplikasi media sosial untuk berbagi cerita dan pengalaman",
+    html_url: "https://postquily.web.id/",
     language: "PHP",
-    stargazers_count: 1,
+    stargazers_count: 0,
     forks_count: 0,
   },
   {
@@ -24,23 +24,21 @@ const projects = [
     description: "Bahasa pemrograman berbasis budaya Jawa yang unik dan edukatif.",
     html_url: "https://github.com/SiloKusuma/Jawa-Script-Language",
     language: "JavaScript",
-    stargazers_count: 293,
-    forks_count: 26,
+    stargazers_count: 0,
+    forks_count: 0,
   },
   {
     name: "Invoice-Maker-Kosan",
     description: "Aplikasi pembuatan invoice otomatis untuk bisnis kos-kosan.",
     html_url: "https://github.com/SiloKusuma/Invoice-Maker-Kosan",
     language: "Python",
-    stargazers_count: 2,
+    stargazers_count: 0,
     forks_count: 0,
   },
 ];
 
 const languageConfig: Record<string, { dot: string; badge: string }> = {
-  TypeScript: { dot: "bg-blue-400", badge: "bg-blue-500/10 text-blue-300 border-blue-500/25" },
   JavaScript: { dot: "bg-yellow-400", badge: "bg-yellow-500/10 text-yellow-300 border-yellow-500/25" },
-  React: { dot: "bg-cyan-400", badge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/25" },
   Python: { dot: "bg-blue-500", badge: "bg-blue-500/10 text-blue-300 border-blue-500/25" },
   PHP: { dot: "bg-purple-500", badge: "bg-purple-500/10 text-purple-300 border-purple-500/25" },
 };

@@ -4,7 +4,7 @@ const navItems = [
   { label: "Blog", href: "#blog" },
   { label: "Proyek", href: "#projects" },
   { label: "Tentang", href: "#about" },
-  { label: "Teman", href: "/friends" },
+  // { label: "Teman", href: "/friends" },
   { label: "Kontak", href: "#contact" },
 ];
 

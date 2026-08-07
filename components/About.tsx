@@ -27,14 +27,12 @@ export default function About() {
       <p className="section-label animate-fade-up">About</p>
       <div className="mt-6 animate-fade-up delay-2">
         <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl">
-          Halo, saya silokusuma.dev. Saya seorang frontend developer
-          yang antusias dalam menciptakan antarmuka digital yang bersih,
-          fungsional, dan nyaman digunakan.
+          Halo, saya Silo Kusuma. Saya seorang software engineer
+          yang antusias dalam menciptakan infrastruktur teknologi,
+          fungsional, dan bisa membantu bagi semua orang.
         </p>
-        <p className="mt-5 text-base md:text-lg text-neutral-600 leading-relaxed max-w-2xl">
-          Saya percaya produk digital yang baik lahir dari kode yang
-          terstruktur, perhatian terhadap detail, dan empati terhadap
-          pengguna. Setiap baris kode adalah keputusan desain.
+        <p className="mt-5 text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl">
+          Saya percaya bahwa saya bisa menciptakan sistem yang baik adalah perpaduan antara kode dan logika.
         </p>
       </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { Star, GitFork, ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 const projects = [
   {
@@ -44,53 +45,84 @@ const languageConfig: Record<string, { dot: string; badge: string }> = {
 };
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+  const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
   const lang = project.language ? languageConfig[project.language] : null;
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const id = Date.now();
+    
+    setRipples((prev) => [...prev, { id, x, y }]);
+    
+    setTimeout(() => {
+      setRipples((prev) => prev.filter((r) => r.id !== id));
+    }, 600);
+  };
 
   return (
     <a
       href={project.html_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-md p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_-5px_rgba(255,255,255,0.05)]"
+      onMouseEnter={handleMouseEnter}
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-md p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_-5px_rgba(255,255,255,0.05)] hover:bg-white hover:shadow-xl"
       style={{ animationDelay: `${0.1 * index}s` }}
     >
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-start justify-between gap-4 relative z-10">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2.5 mb-2">
-            <div className="w-8 h-8 rounded-xl bg-zinc-800 flex items-center justify-center text-xs text-zinc-500 font-bold border border-white/5 shrink-0">
+            <div className="w-8 h-8 rounded-xl bg-zinc-800 flex items-center justify-center text-xs text-zinc-500 font-bold border border-white/5 shrink-0 group-hover:bg-gray-300 group-hover:text-gray-800 transition-colors">
               {project.name.charAt(0).toUpperCase()}
             </div>
-            <h3 className="font-bold text-white truncate group-hover:text-white/90 transition-colors">
+            <h3 className="font-bold text-white truncate group-hover:text-black transition-colors">
               {project.name}
             </h3>
           </div>
           {project.description && (
-            <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2 group-hover:text-zinc-300 transition-colors">
+            <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2 group-hover:text-gray-700 transition-colors">
               {project.description}
             </p>
           )}
         </div>
-        <ExternalLink className="w-4 h-4 text-zinc-600 shrink-0 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <ExternalLink className="w-4 h-4 text-zinc-600 shrink-0 mt-1 opacity-0 group-hover:opacity-100 group-hover:text-black transition-all" />
       </div>
 
-      <div className="flex items-center gap-3 mt-4">
+      <div className="flex items-center gap-3 mt-4 relative z-10">
         {project.language && lang && (
-          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${lang.badge}`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${lang.dot}`} />
+          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${lang.badge} group-hover:bg-black/10 group-hover:text-black group-hover:border-gray-400 transition-all`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${lang.dot} group-hover:bg-gray-600`} />
             {project.language}
           </span>
         )}
-        <span className="text-xs text-zinc-600 flex items-center gap-1">
+        <span className="text-xs text-zinc-600 flex items-center gap-1 group-hover:text-gray-700 transition-colors">
           <Star className="w-3 h-3" />
           {project.stargazers_count}
         </span>
         {project.forks_count > 0 && (
-          <span className="text-xs text-zinc-600 flex items-center gap-1">
+          <span className="text-xs text-zinc-600 flex items-center gap-1 group-hover:text-gray-700 transition-colors">
             <GitFork className="w-3 h-3" />
             {project.forks_count}
           </span>
         )}
       </div>
+
+      {/* Ripple Effect */}
+      {ripples.map((ripple) => (
+        <div
+          key={ripple.id}
+          className="absolute rounded-full pointer-events-none bg-white/30"
+          style={{
+            left: `${ripple.x}px`,
+            top: `${ripple.y}px`,
+            width: "20px",
+            height: "20px",
+            transform: "translate(-50%, -50%)",
+            animation: `ripple 0.6s ease-out`,
+          }}
+        />
+      ))}
     </a>
   );
 }
